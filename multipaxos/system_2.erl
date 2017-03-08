@@ -1,15 +1,18 @@
 %%% Frederick Lindsey (fl1414) and Cyrus Vahidi (cv114)
 
--module(system).
+-module(system_2).
 -export([start/0]).
 
 start() ->
-  N_servers  = 5,
-  N_clients  = 3,
+  N_servers  = 25,
+  N_clients  = 1000,
   N_accounts = 10,
   Max_amount = 1000,
 
-  End_after  = 1000,   %  Milli-seconds for Simulation
+  End_after  = 5000,   %  Milli-seconds for Simulation
+
+  io:format('SYSTEM:\t~p servers, ~p clients, ~p accounts~n~n',
+            [ N_servers, N_clients, N_accounts ]),
 
   _Servers = [ spawn(server, start, [ self(), N_accounts, End_after ]) ||
                _ <- lists:seq(1, N_servers) ],
@@ -43,5 +46,4 @@ start() ->
 
   % Process exits
 
-  timer:sleep(End_after + 1000 + 500),
-  erlang:halt().
+  done.

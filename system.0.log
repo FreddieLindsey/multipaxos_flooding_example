@@ -1,0 +1,77 @@
+erlc -o multipaxos/ebin multipaxos/acceptor.erl
+erlc -o multipaxos/ebin multipaxos/client.erl
+erlc -o multipaxos/ebin multipaxos/commander.erl
+erlc -o multipaxos/ebin multipaxos/database.erl
+erlc -o multipaxos/ebin multipaxos/leader.erl
+erlc -o multipaxos/ebin multipaxos/replica.erl
+erlc -o multipaxos/ebin multipaxos/scout.erl
+erlc -o multipaxos/ebin multipaxos/server.erl
+erlc -o multipaxos/ebin multipaxos/system_0.erl
+erlc -o multipaxos/ebin multipaxos/system_1.erl
+erlc -o multipaxos/ebin multipaxos/system_2.erl
+erl -noshell -pa multipaxos/ebin -setcookie pass -s system_0 start
+SYSTEM:	5 servers, 3 clients, 10 accounts
+
+Transactions 1628
+  1 | -10013 | <0.67.0> 
+  2 | -12066 | <0.67.0> 
+  3 |  -3736 | <0.67.0> 
+  4 |  -4226 | <0.67.0> 
+  5 | -20708 | <0.67.0> 
+  6 |  28920 | <0.67.0> 
+  7 |  24399 | <0.67.0> 
+  8 | -10730 | <0.67.0> 
+  9 |  -3630 | <0.67.0> 
+ 10 |  11790 | <0.67.0> 
+
+Transactions 1628
+  1 | -10013 | <0.75.0> 
+  2 | -12066 | <0.75.0> 
+  3 |  -3736 | <0.75.0> 
+  4 |  -4226 | <0.75.0> 
+  5 | -20708 | <0.75.0> 
+  6 |  28920 | <0.75.0> 
+  7 |  24399 | <0.75.0> 
+  8 | -10730 | <0.75.0> 
+  9 |  -3630 | <0.75.0> 
+ 10 |  11790 | <0.75.0> 
+
+Transactions 1628
+  1 | -10013 | <0.59.0> 
+  2 | -12066 | <0.59.0> 
+  3 |  -3736 | <0.59.0> 
+  4 |  -4226 | <0.59.0> 
+  5 | -20708 | <0.59.0> 
+  6 |  28920 | <0.59.0> 
+  7 |  24399 | <0.59.0> 
+  8 | -10730 | <0.59.0> 
+  9 |  -3630 | <0.59.0> 
+ 10 |  11790 | <0.59.0> 
+
+Transactions 1628
+  1 | -10013 | <0.63.0> 
+  2 | -12066 | <0.63.0> 
+  3 |  -3736 | <0.63.0> 
+  4 |  -4226 | <0.63.0> 
+  5 | -20708 | <0.63.0> 
+  6 |  28920 | <0.63.0> 
+  7 |  24399 | <0.63.0> 
+  8 | -10730 | <0.63.0> 
+  9 |  -3630 | <0.63.0> 
+ 10 |  11790 | <0.63.0> 
+
+Transactions 1628
+  1 | -10013 | <0.71.0> 
+  2 | -12066 | <0.71.0> 
+  3 |  -3736 | <0.71.0> 
+  4 |  -4226 | <0.71.0> 
+  5 | -20708 | <0.71.0> 
+  6 |  28920 | <0.71.0> 
+  7 |  24399 | <0.71.0> 
+  8 | -10730 | <0.71.0> 
+  9 |  -3630 | <0.71.0> 
+ 10 |  11790 | <0.71.0> 
+
+
+BREAK: (a)bort (c)ontinue (p)roc info (i)nfo (l)oaded
+       (v)ersion (k)ill (D)b-tables (d)istribution

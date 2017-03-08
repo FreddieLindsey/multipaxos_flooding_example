@@ -12,7 +12,7 @@ all: part_1 part_2
 part_1:
 	latexmk -pdf part_1.tex
 
-part_2: erl system
+part_2: erl
 
 erl: ebin ${MODULES:%=%.beam}
 
@@ -31,5 +31,11 @@ clean:
 
 # ------------------------------------------------------------------------------
 
-system:
-	$(ERL) -s system start
+system.0: part_2
+	$(ERL) -s system_0 start
+
+system.1: part_2
+	$(ERL) -s system_1 start
+
+system.2: part_2
+	$(ERL) -s system_2 start
