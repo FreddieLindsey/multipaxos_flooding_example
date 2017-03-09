@@ -1,3 +1,5 @@
+# Frederick Lindsey (fl1414) and Cyrus Vahidi (cv114)
+
 SRC_DIR = multipaxos
 BEAM_DIR = multipaxos/ebin
 MODULES = $(patsubst %.erl,%,$(shell ls $(SRC_DIR)/*.erl))
