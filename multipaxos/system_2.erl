@@ -4,12 +4,12 @@
 -export([start/0]).
 
 start() ->
-  N_servers  = 25,
-  N_clients  = 1000,
+  N_servers  = 1,
+  N_clients  = 500,
   N_accounts = 10,
   Max_amount = 1000,
 
-  End_after  = 5000,   %  Milli-seconds for Simulation
+  End_after  = 1000,   %  Milli-seconds for Simulation
 
   io:format('SYSTEM:\t~p servers, ~p clients, ~p accounts~n~n',
             [ N_servers, N_clients, N_accounts ]),

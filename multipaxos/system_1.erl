@@ -5,7 +5,7 @@
 
 start() ->
   N_servers  = 50,
-  N_clients  = 30,
+  N_clients  = 3,
   N_accounts = 10,
   Max_amount = 1000,
 
