@@ -24,7 +24,7 @@ next(Active, Ballot, Proposals, Acceptors, Replicas) ->
                     [self(), Acceptors, Replicas, Ballot, Slot, Cmd]) ;
             false ->
               ok
-          end;
+          end ;
         false ->
           ProposalsO = Proposals
       end,
